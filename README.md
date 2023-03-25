@@ -59,6 +59,7 @@ Acesse o sistema pelo seu navegador, na URL http://localhost:8081
 
 
 ### Tecnologias utilizadas 🛠️
+------------
 
 - Node.js;
 - Handlebars;
