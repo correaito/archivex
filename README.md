@@ -1,48 +1,64 @@
-Archivex - Sistema de Gerenciamento de Arquivo Morto 📁🗃️
-O Archivex é um sistema desenvolvido em Node.js, Handlebars e Bootstrap para gerenciamento de arquivo morto. Com ele, você pode realizar o arquivamento de documentos, controlar a entrada e saída do arquivo, listar os documentos arquivados, emitir etiquetas para as caixas, gerenciar a estrutura física do arquivo e configurar perfis de usuários e cadastros de ranges.
+Archivex
+Sistema de gerenciamento de arquivo morto desenvolvido em Node.js, Handlebars e Bootstrap.
 
-Como clonar o repositório 📥
-Para clonar o repositório do Archivex, siga os seguintes passos:
+Funcionalidades
+O sistema contém as seguintes funcionalidades:
 
-Abra o terminal do seu computador e navegue até o diretório em que deseja clonar o repositório.
-Digite o seguinte comando:
-git clone https://github.com/seunome/archivex.git
+Arquivamento de documentos;
+Controle de entrada e saída do arquivo;
+Listagem de documentos arquivados;
+Emissão de etiquetas das caixas;
+Gerenciamento da estrutura física do arquivo (corredores, estantes, prateleiras e posições);
+Configurações de perfil de usuário;
+Cadastros de ranges (tipos de arquivo e situações de movimentação).
+Como utilizar
+Para utilizar o sistema, siga os seguintes passos:
 
-Como instalar e executar o sistema 🚀
-Para instalar e executar o sistema Archivex, siga os seguintes passos:
+Clone o repositório para sua máquina local com o seguinte comando:
 
-Abra o terminal do seu computador e navegue até o diretório em que o repositório foi clonado.
-Digite o seguinte comando:
+bash
+Copy code
+git clone https://github.com/seu-usuario/archivex.git
+Instale as dependências do projeto com o comando:
+
+Copy code
 npm install
+Inicie o servidor com o comando:
 
-Após a instalação das dependências, digite o seguinte comando:
+sql
+Copy code
 npm start
+Acesse o sistema no seu navegador pelo endereço:
 
-Abra o seu navegador e acesse a URL http://localhost:3000 para visualizar o sistema.
-Telas do sistema 🖥️
-O Archivex conta com as seguintes telas:
+arduino
+Copy code
+http://localhost:3000
+Contribuição
+Contribuições são sempre bem-vindas! Para contribuir com o projeto, siga os seguintes passos:
 
-Tela de login 🔑
-Tela de cadastro de usuário 📝
-Tela de listagem de documentos 📄
-Tela de arquivamento de documentos 📦
-Tela de controle de entrada e saída do arquivo 🚪
-Tela de gerenciamento da estrutura física do arquivo 📚
-Tela de emissão de etiquetas para as caixas 🏷️
-Tela de configurações de perfil de usuário 🔧
-Tela de cadastro de ranges 📂
-Tecnologias utilizadas 🛠️
-O Archivex foi desenvolvido utilizando as seguintes tecnologias:
+Fork este repositório e clone-o na sua máquina local.
 
-Node.js
-Handlebars
-Bootstrap
-Como contribuir 🤝
-Se você deseja contribuir para o desenvolvimento do Archivex, siga os seguintes passos:
+Crie uma branch para sua contribuição com o comando:
 
-Realize um fork do repositório.
-Crie uma branch com a sua feature ou correção de bug: git checkout -b minha-feature.
-Faça as alterações desejadas no código.
-Faça o commit das suas alterações: git commit -m 'feat: Minha nova feature'.
-Faça o push para a sua branch: git push origin minha-feature.
-Abra um Pull Request para a branch main do repositório original.
+css
+Copy code
+git checkout -b minha-contribuicao
+Faça suas alterações e adicione-as ao commit com o comando:
+
+csharp
+Copy code
+git add .
+Faça o commit das suas alterações com o comando:
+
+sql
+Copy code
+git commit -m "Minha contribuição"
+Faça o push das suas alterações para o repositório com o comando:
+
+perl
+Copy code
+git push origin minha-contribuicao
+Abra um pull request para que possamos analisar suas contribuições.
+
+Licença
+Este projeto é licenciado sob a licença MIT. Veja o arquivo LICENSE.md para mais detalhes.
