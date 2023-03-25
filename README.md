@@ -9,7 +9,7 @@
 ### Funcionalidades 🚀
 ------------
 - Arquivamento de documentos;
-- Controle de entrada e saída do arquivo;
+- Controle de entrada e saída do arquivo com leitor de QR-Code;
 - Listagem de documentos arquivados;
 - Emissão de etiquetas das caixas;
 - Gerenciamento da estrutura física do arquivo (corredores, estantes, prateleiras e posições);
