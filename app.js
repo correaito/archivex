@@ -92,8 +92,15 @@ function isAuthenticated(req, res, next) {
   res.redirect('/login');
 }
 
+// Rota inicial
+app.get('/', function(req, res) {
+  res.redirect('/usuarios/login');
+});
+
+
 // Rota de logout
 app.get('/logout', function(req, res) {
   req.logout();
   res.redirect('/login');
 });
+
