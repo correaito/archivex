@@ -3,6 +3,8 @@
 
 ![imagem](https://img.shields.io/badge/-Javascript-yellow) ![imagem](https://img.shields.io/badge/-NodeJS-green) ![imagem](https://img.shields.io/badge/-Handlebars-orange) ![imagem](https://img.shields.io/badge/-Express-black) ![imagem](https://img.shields.io/badge/-MongoBD-white)
 
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=correaito&label=Project%20views&color=0e75b6&style=flat" alt="correaito" /> </p>
+
 
 ### Funcionalidades 🚀
 ------------
@@ -14,7 +16,6 @@
 - Configurações de perfil de usuário;
 - Cadastros de ranges (tipos de arquivo e situações de movimentação).
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=correaito&label=Project%20views&color=0e75b6&style=flat" alt="correaito" /> </p>
 
 ### Tecnologias utilizadas 🛠️
 ------------
@@ -36,12 +37,12 @@ Para utilizar o Archivex, é necessário ter instalado:
 
 ### Instalação 🔧
 
-1. Clone o repositório do Archivex:
+Clone o repositório do Archivex:
 
      $ git clone https://github.com/seu-usuario/archivex.git
     
 
-2. Instale as dependências do projeto:
+Instale as dependências do projeto:
 
      $ npm install
 
@@ -49,11 +50,11 @@ ou
 
      $ yarn install
 
-3. Inicie o servidor
+Inicie o servidor
 
      $ npm start
 
-4. Acesse o sistema pelo seu navegador, na URL http://localhost:8081
+Acesse o sistema pelo seu navegador, na URL http://localhost:8081
 
 
 ### Tecnologias utilizadas 🛠️
