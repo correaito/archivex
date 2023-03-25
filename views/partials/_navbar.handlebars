@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">ArchiveX</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"  aria-controls="navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 submenu justify-content-between">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/usuarios/listar_arquivos"><i class="fa-solid fa-house-chimney"></i> Home</a>
+        </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa-solid fa-box-archive"></i> Documentos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/usuarios/arquivar">Arquivar</a>
+          <a class="dropdown-item" href="/usuarios/listar_arquivos">Listar</a>
+          <a class="dropdown-item" href="/usuarios/movimentacao">Movimentação</a>
+          <a class="dropdown-item" href="/usuarios/layout" target="_blank">Layout</a>
+        </div>
+      </li>
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa-solid fa-sitemap"></i> Estrutura
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/admin/estrutura/ampliar">Criar/Ampliar</a>
+          <a class="dropdown-item" href="/admin/listar_enderecos">Listar</a>
+        </div>
+      </li>
+        {{!-- esse user abaixo vem lá da nossa variavel global  --}}
+       {{#if isAdmin}}
+     <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        <i class="fa-solid fa-gear"></i> Configuração
+      </a>
+      <div class="dropdown-menu">
+         <div class="dropdown-submenu">
+          <a class="dropdown-item dropdown-toggle dropdown-link" href="#">Cadastros</a>
+          <div class="dropdown-menu dropdown-menu-subitem">
+            <a class="dropdown-item" href="/admin/cadastro/tipos">Tipos</a>
+            <a class="dropdown-item" href="/admin/cadastro/situacoes">Situações</a>
+          </div>
+        <a class="dropdown-item" href="/admin/altera_nivel">Nivel Usuário</a>       
+        </div>
+      </div>
+    </li>
+  {{/if}}
+  {{#if user}}
+  </ul>
+  <ul class="navbar-nav ml-auto justify-content-between">
+  <li class="nav-item dropdown direita">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fa-solid fa-user"></i> {{email}}
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" href="/usuarios/dados_conta">Alterar Dados</a>
+    </div>
+     </li>
+    {{/if}}
+        {{#if user}}
+          <li class="nav-item">
+            <a class="nav-link" href="/usuarios/logout">Sair</a>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/usuarios/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/usuarios/registro">Registro</a>
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

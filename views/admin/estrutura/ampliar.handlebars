@@ -1,0 +1,229 @@
+<div class="container col-md-5">
+
+  <div class="card bg-dark mb-3">
+  <div class="card-header" style="color: white">
+   Estrutura de Arquivo
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+
+          <form action="/admin/ampl/estrutura/" method="post">
+            <label for="">Número da área</label>
+            <div class="row">
+              <div class="col-md-12 select1">
+                <select name="area" id="select1" class="form-control mb-1" autofocus>
+                  <option value="" disabled selected>Escolha uma opção</option>
+                  <option value="ampliar">Ampliar</option>
+                  {{#each areas}}
+                    <option value="{{this}}">{{this}}</option>
+                  {{else}}
+                    <option value="">Nenhuma categoria registrada</option>
+                  {{/each}}
+                </select>
+              </div>
+              <div class="col-md-3">
+                <input name="ampliar_area" type="text" id="input1" class="form-control" style="display:none"/>
+              </div>
+            </div>
+            <label id="label_estante" class="mt-3" for="">Número da estante, ou ampliar</label>
+            <div class="row">
+              <div class="col-md-12 select2">
+                <select name="estante" id="select2" class="form-control mb-1" >
+                  <option value="" disabled selected>Escolha uma opção</option>
+                  <option value="ampliar">Ampliar</option>
+                  {{#each estantes}}
+                    <option value="{{this}}">{{this}}</option>
+                  {{else}}
+                    <option value="">Nenhuma categoria registrada</option>
+                  {{/each}}
+                </select>
+              </div>
+              <div class="col-sm-3">
+                <input name="ampliar_estante" type="text" id="input2" class="form-control" style="display: none"/>
+              </div>
+            </div>
+            <label id="label_prateleira" class="mt-3" for="">Número da prateleira, ou ampliar</label>
+            <div class="row">
+              <div class="col-md-12 select3">
+                <select name="prateleira" id="select3" class="form-control mb-1" >
+                  <option value="" disabled selected>Escolha uma opção</option>
+                  <option value="ampliar">Ampliar</option>
+                  {{#each prateleiras}}
+                    <option value="{{this}}">{{this}}</option>
+                  {{else}}
+                    <option value="">Nenhuma categoria registrada</option>
+                  {{/each}}
+                </select>
+              </div>
+              <div class="col-sm-3">
+                <input name="ampliar_prateleira" type="text" id="input3" class="form-control" style="display: none"/>
+              </div>
+            </div>
+           <label id="label_posicao" class="mt-3" for="">Número da posição, ou ampliar</label>
+            <div class="row">
+              <div class="col-md-12 select4">
+                <select name="posicao" id="select4" class="form-control mb-1" >
+                  <option value="" disabled selected>Escolha uma opção</option>
+                  <option value="ampliar">Ampliar</option>
+                </select>
+              </div>
+              <div class="col-sm-3">
+                <input name="ampliar_posicao" type="text" id="input4" class="form-control" style="display: none"/>
+              </div>
+            </div>
+           <label id="label_estante_padrao" style="display: none" class="mt-3" >Introduza o numero padrão de estantes</label>
+            <div class="row">
+              <div class="col-sm-9">
+                <input name="padrao_estante" style="display: none" type="text" id="padrao_estante" class="form-control" />                
+              </div>
+             </div>
+            <label id="label_prateleira_padrao" style="display: none" class="mt-3">Introduza o numero padrão de prateleiras</label>
+            <div class="row">
+              <div class="col-sm-9">
+                 <input name="padrao_prateleira" style="display: none" type="text" id="padrao_prateleira" class="form-control" />       
+              </div>
+            </div>
+           <label id="label_posicao_padrao" style="display: none" class="mt-3">Introduza o numero padrão de posições</label>
+            <div class="row">
+              <div class="col-sm-9">
+                <input name="padrao_posicao" style="display: none" type="text" id="padrao_posicao" class="form-control" />      
+              </div>
+            </div>
+            <button class="btn btn-primary mt-3 mb-2" type="submit">Gravar</button>
+
+          </form>
+       </li>
+    </ul>
+  </div>
+</div>
+
+
+
+<script>
+const select1 = document.getElementById('select1');
+const input1 = document.getElementById('input1');
+const select2 = document.getElementById('select2');
+const input2 = document.getElementById('input2');
+const select3 = document.getElementById('select3');
+const input3 = document.getElementById('input3');
+const select4 = document.getElementById('select4');
+const input4 = document.getElementById('input4');
+const label1 = document.getElementById('label_estante');
+const label2 = document.getElementById('label_prateleira');
+const label3 = document.getElementById('label_posicao');
+const label_estante = document.getElementById('label_estante_padrao');
+const label_prateleira = document.getElementById('label_prateleira_padrao');
+const label_posicao = document.getElementById('label_posicao_padrao');
+const input_padrao_estante = document.getElementById('padrao_estante');
+const input_padrao_prateleira = document.getElementById('padrao_prateleira');
+const input_padrao_posicao = document.getElementById('padrao_posicao');
+const class_select1 = document.querySelector(".select1");
+const class_select2 = document.querySelector(".select2");
+const class_select3 = document.querySelector(".select3");
+const class_select4 = document.querySelector(".select4");
+
+
+select1.addEventListener('change', function() {
+  if (this.value === 'ampliar') {
+    input1.style.display = 'block';
+    select2.style.display = 'none';
+    select3.style.display = 'none';
+    select4.style.display = 'none';
+    label1.style.display = 'none';
+    label2.style.display = 'none';
+    label3.style.display = 'none';
+    input2.style.display = 'none';
+    input3.style.display = 'none';
+    input4.style.display = 'none';
+    label_estante.style.display = 'block';
+    label_prateleira.style.display = 'block';
+    label_posicao.style.display = 'block';
+    input_padrao_estante.style.display = 'block';
+    input_padrao_prateleira.style.display = 'block';
+    input_padrao_posicao.style.display = 'block'
+    // Remove a classe "col-md-12"
+    class_select1.classList.replace("col-md-12", "col-md-9");
+
+
+  } else {
+    input1.style.display = 'none';
+    select2.style.display = 'block';
+    select3.style.display = 'block';
+    select4.style.display = 'block';
+    label1.style.display = 'block';
+    label2.style.display = 'block';
+    label3.style.display = 'block';
+    label_estante.style.display = 'none';
+    label_prateleira.style.display = 'none';
+    label_posicao.style.display = 'none';
+    input_padrao_estante.style.display = 'none';
+    input_padrao_prateleira.style.display = 'none';
+    input_padrao_posicao.style.display = 'none'
+    class_select1.classList.replace("col-md-9", "col-md-12");
+  }
+});
+
+select2.addEventListener('change', function() {
+  if (this.value === 'ampliar') {
+    input2.style.display = 'block';
+    select3.style.display = 'none';
+    select4.style.display = 'none';
+    label2.style.display = 'none';
+    label3.style.display = 'none';
+    input1.style.display = 'none';
+    input3.style.display = 'none';
+    input4.style.display = 'none';    
+    label_prateleira.style.display = 'block';
+    label_posicao.style.display = 'block';
+    input_padrao_prateleira.style.display = 'block';
+    input_padrao_posicao.style.display = 'block'
+    // Remove a classe "col-md-12"
+    class_select2.classList.replace("col-md-12", "col-md-9");
+  } else {
+    input2.style.display = 'none';
+    select3.style.display = 'block';
+    select4.style.display = 'block';
+    label2.style.display = 'block';
+    label3.style.display = 'block';
+    label_prateleira.style.display = 'none';
+    label_posicao.style.display = 'none';
+    input_padrao_prateleira.style.display = 'none';
+    input_padrao_posicao.style.display = 'none'
+    class_select2.classList.replace("col-md-9", "col-md-12");
+  }
+});
+
+select3.addEventListener('change', function() {
+  if (this.value === 'ampliar') {
+    input3.style.display = 'block';
+    select4.style.display = 'none';
+    label3.style.display = 'none';
+    input2.style.display = 'none';
+    input1.style.display = 'none';
+    input4.style.display = 'none';
+    label_posicao.style.display = 'block';
+    input_padrao_posicao.style.display = 'block'
+    // Remove a classe "col-md-12"
+    class_select3.classList.replace("col-md-12", "col-md-9");
+  } else {
+    input3.style.display = 'none';
+    select4.style.display = 'block';
+    label3.style.display = 'block';
+    label_posicao.style.display = 'none';
+    input_padrao_posicao.style.display = 'none';
+    class_select3.classList.replace("col-md-9", "col-md-12");
+  }
+});
+
+select4.addEventListener('change', function() {
+  if (this.value === 'ampliar') {
+    input4.style.display = 'block';
+    // Remove a classe "col-md-12"
+    class_select4.classList.replace("col-md-12", "col-md-9");
+  } else {
+    input4.style.display = 'none';
+    class_select4.classList.replace("col-md-9","col-md-12");
+  }
+});
+
+</script>

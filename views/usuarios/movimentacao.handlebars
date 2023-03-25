@@ -1,0 +1,101 @@
+<div class="container col-md-5">
+
+<div class="card bg-dark mb-3">
+  <div class="card-header" style="color: white">
+   Movimentação de Arquivo
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+
+<form action="ler-qrcode" method="POST">
+  <div class="form-group">
+    <div style="display:none" id="conslt_form">
+     <label for="">Caixa</label>
+    <input class="form-control mb-2" id="caixa" type="text" disabled>
+      <label for="">Endereço</label>
+     <input class="form-control mb-2" id="endereco_mov" type="text" disabled>
+     <label for="">Conteúdo</label>
+     <textarea disabled class="form-control mb-2" id="conteudo" rows="5"></textarea>
+     </div>
+     <label for="situacao">Situação</label>
+     <select id="situacao" name="situacao" class="form-control">
+      <option value="Arquivado">Arquivado</option>
+      <option value="Desarquivado">Desarquivado</option>
+      <option value="Expurgado">Expurgado</option>
+    </select>
+  </div>
+  <button type="button" class="btn btn-success" onclick="leitorQRCode()"><i class="fa-sharp fa-solid fa-qrcode"></i> Ler QRCode</button>
+  <input type="hidden" id="qrcode-data" name="qrcodeData">
+  <button type="submit" class="btn btn-primary">Gravar</button>
+  <div class="alert alert-success" id="msg_success_qrcode" style="margin-top: 10px;display:none;">QRCode lido com sucesso!</div>
+</form>
+
+</li>
+  </ul>
+</div>
+
+</div>
+
+<style>
+#preview {
+max-width: 60%;
+max-height: 80%;
+}
+</style>
+
+<script>
+
+function leitorQRCode() {
+  const leitor = new Instascan.Scanner({ video: document.getElementById('preview') });
+  leitor.addListener('scan', function (conteudoQrCode) {
+    document.getElementById('qrcode-data').value = conteudoQrCode;
+
+    document.getElementById('conslt_form').style.display = 'block';
+
+    const qrcodeData = JSON.parse(conteudoQrCode);    
+    document.getElementById('caixa').value = qrcodeData.numero;
+    document.getElementById('endereco_mov').value = qrcodeData.endereco;
+    document.getElementById('conteudo').value = qrcodeData.conteudo;
+    leitor.stop();
+
+    // Fecha a modal
+    $('#modal-leitor-qrcode').modal('hide');
+
+    // Exibe mensagem de sucesso
+    var qrcode_msg = document.getElementById('msg_success_qrcode');
+    var audio = new Audio('/sounds/beep.mp3');
+    audio.play();
+    qrcode_msg.style.display = 'block';
+
+  });
+  Instascan.Camera.getCameras().then(function (cameras) {
+    if (cameras.length > 0) {
+      leitor.start(cameras[2]);
+      $('#modal-leitor-qrcode').modal('show');
+    } else {
+      alert('Não foi possível acessar a câmera.');
+    }
+  }).catch(function (e) {
+    console.error(e);
+    alert('Ocorreu um erro ao acessar a câmera.');
+  });
+}
+
+</script>
+
+<div class="modal fade" id="modal-leitor-qrcode" tabindex="-1" role="dialog" aria-labelledby="modal-leitor-qrcode-label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-leitor-qrcode-label">Ler QRCode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <video id="preview"></video>
+      </div>
+    </div>
+  </div>
+</div>
+

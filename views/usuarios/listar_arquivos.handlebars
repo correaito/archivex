@@ -1,0 +1,34 @@
+{{#if documentos.length}}
+  <table class="table table-hover mt-3 mb-2 display" id="tabela-documentos" style="margin-top: 100px;">
+    <thead class="table-dark">
+      <tr>
+        <th>Nº Caixa</th>
+        <th>Endereço</th>
+        <th>Tipo</th>
+        <th>Conteúdo</th>
+        <th style="display:none"></th>
+        <th>Situação</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each documentos}}
+        <tr>
+          <td>{{numero}}</td>
+          <td>{{endereco}}</td> 
+          <td>{{tipo}}</td>
+          <td>{{conteudo}}</td>
+          <td style="display:none">{{conteudo}}</td>
+          <td>{{situação}}</td>
+          <td><a href="/usuarios/gerar_etiqueta/{{numero}}" target="_blank"><i title="Imprimir Etiqueta" class="fa-regular fa-file-pdf"></i></a></td>
+          <td><a href="/usuarios/editar_arquivo/{{numero}}"><i title="Editar" class="fa-regular fa-pen-to-square"></i></a></td>
+          <td><a href="/usuarios/visualizar_arquivo/{{numero}}"><i title="Visualizar" class="fa-sharp fa-solid fa-eye"></i></a></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{/if}}
+
+

@@ -1,0 +1,21 @@
+{{#if enderecos.length}}
+  <table class="table mt-3 mb-2 table-hover" id="tabela-enderecos">
+    <thead class="thead-dark">
+      <tr>
+        <th>Endereço</th>
+        <th>Status</th>
+        <th>Caixa/Pasta</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each enderecos}}
+        <tr>
+          <td>{{endereco}}</td>
+          <td>{{status}}</td>
+          <td>{{documento}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+{{/if}}
