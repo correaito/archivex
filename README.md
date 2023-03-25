@@ -70,12 +70,12 @@ Acesse o sistema pelo seu navegador, na URL http://localhost:8081
 ------------
 Contribuições são sempre bem-vindas! Para contribuir, siga os seguintes passos:
 
-Fork este repositório;
+Fork este repositório;<br>
 Crie uma nova branch para suas alterações:
     
     $ git checkout -b feature/nome-da-sua-feature
 
-Faça as alterações necessárias no código;
+Faça as alterações necessárias no código;<br>
 Realize o commit das suas alterações:
 
     $ git commit -m 'feat: minha nova feature'
