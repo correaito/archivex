@@ -1,7 +1,7 @@
 <h1 align="center">Archivex 💾🗃️</h1>
 <h4 align="center">Archivex é um sistema desenvolvido em Node.js, Handlebars e Bootstrap para gerenciamento de arquivo morto. Com ele é possível arquivar, controlar a entrada e saída de documentos, gerenciar a estrutura física do arquivo e emitir etiquetas de identificação das caixas. Além disso, o sistema conta com telas para listagem de documentos arquivados e configurações de perfil de usuário e cadastros de ranges.</h4>
 
-![imagem](https://img.shields.io/badge/-Javascript-yellow) ![imagem](https://img.shields.io/badge/-NodeJS-green) ![imagem](https://img.shields.io/badge/-Handlebars-orange) ![imagem](https://img.shields.io/badge/-Express-black) ![imagem](https://img.shields.io/badge/-MongoBD-white)
+![imagem](https://img.shields.io/badge/-Javascript-yellow) ![imagem](https://img.shields.io/badge/-NodeJS-green) ![imagem](https://img.shields.io/badge/-Handlebars-orange) ![imagem](https://img.shields.io/badge/-Express-black) ![imagem](https://img.shields.io/badge/-MongoBD-gray)
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=correaito&label=Project%20views&color=0e75b6&style=flat" alt="correaito" /> </p>
 
@@ -36,6 +36,7 @@ Para utilizar o Archivex, é necessário ter instalado:
 - NPM ou Yarn;
 
 ### Instalação 🔧
+------------
 
 Clone o repositório do Archivex:
 
