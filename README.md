@@ -1,54 +1,78 @@
-# Archivex 💾🗃️
-Archivex é um sistema desenvolvido em Node.js, Handlebars e Bootstrap para gerenciamento de arquivo morto. Com ele é possível arquivar, controlar a entrada e saída de documentos, gerenciar a estrutura física do arquivo e emitir etiquetas de identificação das caixas. Além disso, o sistema conta com telas para listagem de documentos arquivados e configurações de perfil de usuário e cadastros de ranges.
+<h1 align="center">Archivex 💾🗃️</h1>
+<h4 align="center">Archivex é um sistema desenvolvido em Node.js, Handlebars e Bootstrap para gerenciamento de arquivo morto. Com ele é possível arquivar, controlar a entrada e saída de documentos, gerenciar a estrutura física do arquivo e emitir etiquetas de identificação das caixas. Além disso, o sistema conta com telas para listagem de documentos arquivados e configurações de perfil de usuário e cadastros de ranges.</h4>
 
-Funcionalidades 🚀
-Arquivamento de documentos;
-Controle de entrada e saída do arquivo;
-Listagem de documentos arquivados;
-Emissão de etiquetas das caixas;
-Gerenciamento da estrutura física do arquivo (corredores, estantes, prateleiras e posições);
-Configurações de perfil de usuário;
-Cadastros de ranges (tipos de arquivo e situações de movimentação).
-Pré-requisitos ⚙️
+![imagem](https://img.shields.io/badge/-Javascript-yellow) ![imagem](https://img.shields.io/badge/-NodeJS-green) ![imagem](https://img.shields.io/badge/-Handlebars-orange) ![imagem](https://img.shields.io/badge/-Express-black) ![imagem](https://img.shields.io/badge/-MongoBD-white)
+
+
+### Funcionalidades 🚀
+------------
+- Arquivamento de documentos;
+- Controle de entrada e saída do arquivo;
+- Listagem de documentos arquivados;
+- Emissão de etiquetas das caixas;
+- Gerenciamento da estrutura física do arquivo (corredores, estantes, prateleiras e posições);
+- Configurações de perfil de usuário;
+- Cadastros de ranges (tipos de arquivo e situações de movimentação).
+
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=correaito&label=Project%20views&color=0e75b6&style=flat" alt="correaito" /> </p>
+
+### Tecnologias utilizadas 🛠️
+------------
+Esse projeto foi desenvolvido como um Projeto Pessoal, com as seguintes tecnologias:
+
+- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript "Heading link")
+- [NodeJS](https://nodejs.org/en/ "Heading link")
+- [Handlebars](https://handlebarsjs.com/ "Heading link")
+- [Express](https://expressjs.com/ "Heading link")
+- [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/ "Heading link")
+
+
+### Pré-requisitos ⚙️
+------------
 Para utilizar o Archivex, é necessário ter instalado:
 
-Node.js;
-NPM ou Yarn;
-Instalação 🔧
-Clone o repositório do Archivex:
-bash
-Copy code
-git clone https://github.com/seu-usuario/archivex.git
-Instale as dependências do projeto:
-Copy code
-npm install
+- Node.js;
+- NPM ou Yarn;
+
+### Instalação 🔧
+
+1. Clone o repositório do Archivex:
+
+     $ git clone https://github.com/seu-usuario/archivex.git
+    
+
+2. Instale as dependências do projeto:
+
+     $ npm install
+
 ou
 
-Copy code
-yarn install
-Inicie o servidor:
-sql
-Copy code
-npm start
-ou
+     $ yarn install
 
-sql
-Copy code
-yarn start
-Acesse o sistema pelo seu navegador, na URL http://localhost:3000.
-Tecnologias utilizadas 🛠️
-Node.js;
-Handlebars;
-Bootstrap;
-JavaScript.
-Contribuição 👥
+3. Inicie o servidor
+
+     $ npm start
+
+4. Acesse o sistema pelo seu navegador, na URL http://localhost:8081
+
+
+### Tecnologias utilizadas 🛠️
+
+- Node.js;
+- Handlebars;
+- Bootstrap;
+- JavaScript.
+
+### Contribuição 👥
+------------
 Contribuições são sempre bem-vindas! Para contribuir, siga os seguintes passos:
 
-Fork este repositório;
-Crie uma nova branch para suas alterações: git checkout -b feature/nome-da-sua-feature;
-Faça as alterações necessárias no código;
-Realize o commit das suas alterações: git commit -m 'feat: minha nova feature';
-Realize o push para a sua branch: git push origin feature/nome-da-sua-feature;
-Abra um Pull Request.
-Licença 📝
-Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+1. Fork este repositório;
+2. Crie uma nova branch para suas alterações: git checkout -b feature/nome-da-sua-feature;
+3. Faça as alterações necessárias no código;
+4. Realize o commit das suas alterações: git commit -m 'feat: minha nova feature';
+5. Realize o push para a sua branch: git push origin feature/nome-da-sua-feature;
+6. Abra um Pull Request.
+
+------------
+Feito com ♥ por Alan Garmatter 👋 
