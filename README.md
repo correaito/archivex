@@ -71,7 +71,7 @@ Acesse o sistema pelo seu navegador, na URL http://localhost:8081/
 Contribuições são sempre bem-vindas! Para contribuir, siga os seguintes passos:
 
 1️⃣ Fork este repositório;<br><br>
-2️⃣Crie uma nova branch para suas alterações:
+2️⃣ Crie uma nova branch para suas alterações:
     
     $ git checkout -b feature/nome-da-sua-feature
 
