@@ -94,7 +94,7 @@ function isAuthenticated(req, res, next) {
 
 // Rota inicial
 app.get('/', function(req, res) {
-  res.redirect('/usuarios/login');
+  res.redirect('/usuarios/listar_arquivos');
 });
 
 
