@@ -1,5 +1,5 @@
 <h1 align="center">Archivex 💾🗃️</h1>
-<h4 align="center">Archivex é um sistema desenvolvido em Node.js, Handlebars e Bootstrap para gerenciamento de arquivo morto. Com ele é possível arquivar, controlar a entrada e saída de documentos, gerenciar a estrutura física do arquivo e emitir etiquetas de identificação das caixas. Além disso, o sistema conta com telas para listagem de documentos arquivados e configurações de perfil de usuário e cadastros de ranges.</h4>
+<h4 align="center">Sistema para gerenciamento de Arquivo Morto desenvolvido com finalidade de estudo e treinamento de sistemas.</h4>
 
 ![imagem](https://img.shields.io/badge/-Javascript-yellow) ![imagem](https://img.shields.io/badge/-NodeJS-green) ![imagem](https://img.shields.io/badge/-Handlebars-orange) ![imagem](https://img.shields.io/badge/-Express-black) ![imagem](https://img.shields.io/badge/-MongoBD-gray)
 
