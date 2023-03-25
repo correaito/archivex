@@ -55,7 +55,7 @@ Inicie o servidor
 
      $ npm start
 
-Acesse o sistema pelo seu navegador, na URL http://localhost:8081/usuarios/login
+Acesse o sistema pelo seu navegador, na URL http://localhost:8081/
 
 
 ### Tecnologias utilizadas 🛠️
