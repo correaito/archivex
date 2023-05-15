@@ -40,7 +40,7 @@ Para utilizar o Archivex, é necessário ter instalado:
 
 Clone o repositório do Archivex:
 
-     $ git clone https://github.com/seu-usuario/archivex.git
+     $ git clone https://github.com/correaito/archivex.git
     
 
 Instale as dependências do projeto:
